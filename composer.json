@@ -1,0 +1,22 @@
+{
+    "name": "ihor/admin",
+    "description": "ihor/admin",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "~6.6.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "Ihor\\Admin\\IhorAdminPlugin",
+        "label": {
+            "de-DE": "Admin plugin",
+            "en-GB": "Admin plugin"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Ihor\\Admin\\": "src/"
+        }
+    }
+}
