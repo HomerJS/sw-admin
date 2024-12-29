@@ -1,4 +1,4 @@
-Shopware.module.register('ihor-test', {
+Shopware.Module.register('ihor-test', {
     type: 'plugin', //core or plugin - 2 Options, so always use plugin
     name: 'MyPluginName', // Unique
     // title: 'swag-example.general.mainMenuItemGeneral',
