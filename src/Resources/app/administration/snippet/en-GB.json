@@ -1,0 +1,9 @@
+{
+  "swag-example": {
+    "nested": {
+      "value": "example",
+      "examplePluralization": "1 Product | {n} Products"
+    },
+    "foo": "bar"
+  }
+}

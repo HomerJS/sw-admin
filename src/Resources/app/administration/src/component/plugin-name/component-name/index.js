@@ -15,4 +15,13 @@ export default Shopware.Component.wrapComponentConfig('component-name', {
         };
     },
 
+    methods: {
+        createdComponent() {
+            // translate in JS
+            const myCustomText = this.$tc('swag-example.foo');
+
+            console.log(myCustomText);
+        }
+    }
+
 });
