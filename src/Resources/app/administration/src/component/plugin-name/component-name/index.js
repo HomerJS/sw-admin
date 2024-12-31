@@ -7,6 +7,12 @@
 import myTemplate from 'hello-world.html.twig';
 export default Shopware.Component.wrapComponentConfig('component-name', {
 
-    template: myTemplate
+    template: myTemplate,
+
+    metaInfo() {
+        return {
+            title: this.$createTitle()
+        };
+    },
 
 });
