@@ -1,3 +1,5 @@
+import template from './hello-shop.html.twig';
+
 Shopware.Component.register('my-first-module-shop', {
-    template: '<h2>Hello Shop!</h2>'
+    template: template
 });
