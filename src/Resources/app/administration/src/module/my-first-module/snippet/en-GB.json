@@ -1,0 +1,8 @@
+{
+  "my-first-module": {
+    "module": {
+      "title": "My custom module",
+      "description": "Manage this custom module here"
+    }
+  }
+}
