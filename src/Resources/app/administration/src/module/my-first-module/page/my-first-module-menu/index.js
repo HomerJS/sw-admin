@@ -1,3 +1,11 @@
+import template from './my-first-module-menu.html.twig'
+
 Shopware.Component.register('my-first-module-menu', {
-    template: '<h2>Hello world!</h2>'
+    template: template,
+
+    metaInfo() {
+        return {
+            title: this.$createTitle()
+        };
+    },
 });
