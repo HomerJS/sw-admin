@@ -4,6 +4,11 @@
 {#        always add #content block #}
         <template #content>
             <h2>Hello Menu!</h2>
+            <p>
+                {{ $tc('admin.general.hello') }}
+                {{ $tc('admin.general.hellos', 1) }}
+                {{ $tc('admin.general.hellos', 2) }}
+            </p>
         </template>
     </sw-page>
 {% endblock %}

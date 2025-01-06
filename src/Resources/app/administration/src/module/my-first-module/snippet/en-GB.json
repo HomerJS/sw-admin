@@ -4,5 +4,17 @@
       "title": "My custom module",
       "description": "Manage this custom module here"
     }
+  },
+  "admin": {
+    "general": {
+      "hello": "Hello World",
+      "hellos": "Hello World! | {n} Hello Worlds!!!"
+    }
+  },
+  "sw-cms": {
+    "general": {
+      "moduleTitle": "New module title",
+      "mainMenuItemGeneral": "New Item Menu"
+    }
   }
 }
