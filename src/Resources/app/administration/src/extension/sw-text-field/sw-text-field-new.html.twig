@@ -1,0 +1,21 @@
+<mt-text-field
+        v-if="useMeteorComponent"
+        v-bind="$attrs"
+        :model-value="compatValue"
+        v-on="listeners"
+        @update:modelValue="handleUpdateModelValue"
+>
+    <template
+            v-for="(index, name) in getSlots()"
+            #[name]="data"
+    >
+        <slot
+                :name="name"
+                v-bind="data"
+        >
+        </slot>
+        <h1>I am new text field</h1>
+    </template>
+    <slot></slot>
+</mt-text-field>
+
