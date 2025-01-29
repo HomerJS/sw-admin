@@ -6,3 +6,4 @@ import './component/plugin-name/hello-shop';
 
 //register Module
 import './module/my-first-module'
+import './module/update-module'
