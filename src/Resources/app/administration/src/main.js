@@ -1,6 +1,9 @@
 // Register Mixins
 import './mixins/my-test-mixin.js'
 
+// Register Directives
+import './directive/focus'
+
 //Register Components
 import './component/plugin-name/hello-shop';
 
