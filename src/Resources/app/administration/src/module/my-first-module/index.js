@@ -1,6 +1,8 @@
 import EN from './snippet/en-GB.json'
 import DE from './snippet/de-DE.json'
 
+import './acl'
+
 import './page/my-first-module-menu'
 import './page/my-first-module-system'
 import './page/my-first-module-shop'
