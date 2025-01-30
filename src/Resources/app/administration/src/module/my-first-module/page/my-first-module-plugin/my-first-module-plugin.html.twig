@@ -5,6 +5,16 @@
         <template #content>
             <h2>Hello Plugin!</h2>
 
+            <sw-button
+                    :disabled="false"
+                    :square="false"
+                    :block="false"
+                    :isLoading="false"
+                    @click="greet"
+            >
+                Lorem ipsum dolor sit amet
+            </sw-button>
+
         </template>
     </sw-page>
 {% endblock %}

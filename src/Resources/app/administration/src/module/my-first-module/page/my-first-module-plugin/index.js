@@ -7,6 +7,7 @@ Component.register('my-first-module-plugin', {
 
     mixins: [
         Mixin.getByName('my-test-mixin'),
+        Mixin.getByName('notification')
     ],
 
     mounted() {
@@ -14,6 +15,12 @@ Component.register('my-first-module-plugin', {
     },
 
     methods: {
-
+        greet: function () {
+            console.log('greet');
+            this.createNotificationSuccess({
+                message: this.$tc('global.sw-media-media-item.notification.renamingSuccess.message'),
+            });
+            console.log('greet2');
+        }
     }
 });
