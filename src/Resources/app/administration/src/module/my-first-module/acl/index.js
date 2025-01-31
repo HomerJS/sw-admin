@@ -6,8 +6,8 @@ Shopware.Service('privileges').addPrivilegeMappingEntry({
     key: 'mykey',
     roles: {
         viewer: {
-            privileges: ['mykey:read'],
-            dependencies: ['plugin:read']
+            privileges: [],
+            dependencies: []
         },
         editor: {
             privileges: [],

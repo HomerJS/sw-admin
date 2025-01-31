@@ -4,6 +4,9 @@ import './mixins/my-test-mixin.js'
 // Register Directives
 import './directive/focus'
 
+// Register ACL override
+import './acl-override'
+
 //Register Components
 import './component/plugin-name/hello-shop';
 
