@@ -14,6 +14,7 @@ import './component/plugin-name/hello-shop';
 import './extension/sw-dashboard-index-override';
 import './extension/sw-custom-field';
 import './extension/sw-product-settings-form';
+import './extension/sw-product-detail'
 
 //register Module
 import './module/my-first-module'
