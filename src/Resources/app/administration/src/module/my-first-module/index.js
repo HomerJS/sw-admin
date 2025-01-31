@@ -24,7 +24,10 @@ Shopware.Module.register('my-first-module', {
     routes: {
         menu: {
             component: 'my-first-module-menu',
-            path: 'menu'
+            path: 'menu',
+            meta: {
+                privilege: 'mykey.viewer' // e.g. 'product.viewer'
+            }
         },
         plugin: {
             component: 'my-first-module-plugin',
@@ -54,7 +57,8 @@ Shopware.Module.register('my-first-module', {
         path: 'my.first.module.menu',
         icon: 'default-shopping-paper-bag-product',
         parent: 'sw-catalogue',
-        position: 100
+        position: 100,
+        privilege: 'mykey.viewer'
     }],
 
     settingsItem: [
@@ -65,6 +69,7 @@ Shopware.Module.register('my-first-module', {
             name: 'Plugin Item', // optional, fallback is taken from module
             id: 'my-first-module-plugin', // optional, fallback is taken from module
             label: 'Plugin Item', // optional, fallback is taken from module
+            privilege: 'mykey.viewer'
         },
         {
             group: 'shop',
