@@ -23,3 +23,15 @@ Shopware.Service('privileges').addPrivilegeMappingEntry({
         }
     }
 });
+
+Shopware.Service('privileges').addPrivilegeMappingEntry({
+    category: 'additional_permissions',
+    parent: 'myaddparent',
+    key: 'mysystem',
+    roles: {
+        clear_cache: {
+            privileges: [],
+            dependencies: ['system:clear:cache']
+        }
+    }
+});
