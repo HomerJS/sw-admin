@@ -16,5 +16,21 @@
       "moduleTitle": "New module title",
       "mainMenuItemGeneral": "New Item Menu"
     }
+  },
+  "sw-privileges": {
+    "permissions": {
+      "mykey": {
+        "label": "My Key Label"
+      },
+      "parents": {
+        "myparent": "My Parent Label"
+      }
+    },
+    "additional_permissions": {
+      "mysystem": {
+        "label": "My System Label",
+        "clear_cache": "My Clear cache Label"
+      }
+    }
   }
 }
