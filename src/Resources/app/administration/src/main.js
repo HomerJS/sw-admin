@@ -19,3 +19,4 @@ import './extension/sw-product-detail'
 //register Module
 import './module/my-first-module'
 import './module/update-module'
+import './module/default-config'

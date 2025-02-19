@@ -1,0 +1,62 @@
+{% block default_confif_view_main %}
+    <sw-page style="border: 1px solid #D8DDE6;">
+        <template #search-bar>
+            <sw-search-bar>
+            </sw-search-bar>
+        </template>
+        <template #smart-bar-header>
+            <h2>{{ $tc('default-config.item.bar') }}</h2>
+        </template>
+        <template #smart-bar-actions>
+            <sw-button-process
+                    class="sw-settings-cart__save-action"
+                    :is-loading="isLoading"
+                    :process-success="isSaveSuccessful"
+                    :disabled="isLoading"
+                    variant="primary"
+                    @update:process-success="saveFinish"
+                    @click="onClickSave"
+            >
+                {{ $tc('sw-settings-cart.general.buttonSave') }}
+            </sw-button-process>
+        </template>
+        <template #content>
+            <div class="sw-system-config">
+                <div class="sw-system-config__global-sales-channel-switch">
+                    <sw-sales-channel-switch
+                            :label="$tc('sw-settings.system-config.labelSalesChannelSelect')"
+                            @change-sales-channel-id="onSalesChannelChanged"
+                    />
+                </div>
+            </div>
+
+            <sw-card-view>
+                <sw-card :title="$tc('default-config.item.card')" :isLoading="isLoading">
+
+
+                        <sw-system-config
+                                ref="systemConfig"
+                                domain="core.my"
+                                @loading-changed="onLoadingChanged"
+                        >
+
+
+                            <sw-text-field :copyable="false" :copyableTooltip="false">
+                                Lorem ipsum dolor sit amet
+                            </sw-text-field>
+
+                            <sw-select-field placeholder="placeholder goes here..." label="label">
+                                <option value="value1">Label #1</option>
+                                <option value="value2">Label #2</option>
+                                <option value="value3">Label #3</option>
+                                <option value="value4">Label #4</option>
+                                <option value="value5">Label #5</option>
+                            </sw-select-field>
+
+                            <sw-switch-field v-model="aBooleanProperty" label="Name" />
+                        </sw-system-config>
+                </sw-card>
+            </sw-card-view>
+        </template>
+    </sw-page>
+{% endblock %}

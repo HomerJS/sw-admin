@@ -1,0 +1,15 @@
+{
+  "default-config": {
+    "general": {
+      "title" : "General Title",
+      "desc" : "General Description"
+    },
+    "item": {
+      "title" : "Item Title",
+      "label" : "Item Label",
+      "bar" : "Settings > Item Config",
+      "save" : "Save",
+      "card" : "Basic Config"
+    }
+  }
+}
