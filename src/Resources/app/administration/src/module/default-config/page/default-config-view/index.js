@@ -25,6 +25,9 @@ Shopware.Component.register('default-config-view', {
     methods: {
         onClickSave() {
             this.$refs.systemConfig.saveAll();
+            this.createNotificationSuccess({
+                message: this.$tc('global.sw-media-media-item.notification.renamingSuccess.message'),
+            });
         },
     }
 });
