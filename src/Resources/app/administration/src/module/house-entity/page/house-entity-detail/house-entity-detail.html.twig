@@ -1,0 +1,30 @@
+{% block house_entity_detail %}
+    <sw-page class="house-entity-detail">
+        {% block house_entity_detail_smart_bar_action %}
+            <template #smart-bar-actions>
+                <sw-button :router-link="{name: 'house.entity.index'}" >
+                    {{ $tc('house-entity.detail.cancelButtonText') }}
+                </sw-button>
+
+                <sw-button-process
+                        :isLoading="isLoading"
+                        :processSuccess="processSuccess"
+                        variant="primary"
+                        @process-finish="saveFinish"
+                        @click="onClickSave">
+                    {{ $tc('house-entity.detail.saveButtonText') }}
+                </sw-button-process>
+            </template>
+        {% endblock %}
+        <template #content>
+            {% block house_entity_detail_content %}
+                <sw-card-view>
+                    <sw-card v-if="house" :isLoading="isLoading">
+                        <sw-text-field v-model:value="house.name" :label="$tc('house-entity.detail.nameLabel')" />
+                        <sw-number-field numberType="int" v-model:value="house.number" :label="$tc('house-entity.detail.numberLabel')" />
+                    </sw-card>
+                </sw-card-view>
+            {% endblock %}
+        </template>
+    </sw-page>
+{% endblock %}

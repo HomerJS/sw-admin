@@ -1,0 +1,25 @@
+{
+  "house-entity": {
+    "general": {
+      "title": "house-entity",
+      "description": "house-entity"
+    },
+    "list": {
+      "addButtonText": "Create"
+    },
+    "create" : {
+      "errorSave": "Entity can't be saved.",
+      "cancelButtonText": "Cancel",
+      "saveButtonText": "Save",
+      "nameLabel": "House Name",
+      "numberLabel": "House Number"
+    },
+    "detail" : {
+      "errorSave": "Entity can't be saved.",
+      "cancelButtonText": "Cancel",
+      "saveButtonText": "Save",
+      "nameLabel": "House Name",
+      "numberLabel": "House Number"
+    }
+  }
+}

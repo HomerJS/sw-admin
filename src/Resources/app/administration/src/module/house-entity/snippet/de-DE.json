@@ -1,0 +1,25 @@
+{
+  "house-entity": {
+    "general": {
+      "title": "house-entity",
+      "description": "house-entity"
+    },
+    "list": {
+      "addButtonText": "Create"
+    },
+    "create" : {
+      "errorSave": "Entity kann man nicht speichern.",
+      "cancelButtonText": "Absagen",
+      "saveButtonText": "Speichern",
+      "nameLabel": "Der Name des Houses",
+      "numberLabel": "Die Nummer des Houses"
+    },
+    "detail" : {
+      "errorSave": "Entity kann man nicht speichern.",
+      "cancelButtonText": "Absagen",
+      "saveButtonText": "Speichern",
+      "nameLabel": "Der Name des Houses",
+      "numberLabel": "Die Nummer des Houses"
+    }
+  }
+}

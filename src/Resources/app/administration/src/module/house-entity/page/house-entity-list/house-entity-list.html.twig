@@ -1,0 +1,23 @@
+{% block house_entity_list %}
+    <sw-page class="house-entity-list">
+        {% block house_entity_list_smart_bar_action %}
+            <template #smart-bar-actions>
+                <sw-button variant="primary" :block="true" size="small" :router-link="{name: 'house.entity.create'}" >
+                    {{ $tc('house-entity.list.addButtonText') }}
+                </sw-button>
+            </template>
+        {% endblock %}
+        <template #content>
+            {% block house_entity_list_content %}
+                <sw-entity-listing
+                        v-if="houses"
+                        :items="houses"
+                        :repository="repository"
+                        :showSelection="false"
+                        :columns="columns"
+                        detail-route="house.entity.detail"
+                />
+            {% endblock %}
+        </template>
+    </sw-page>
+{% endblock %}
