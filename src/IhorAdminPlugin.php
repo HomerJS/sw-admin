@@ -24,7 +24,8 @@ class IhorAdminPlugin extends Plugin
 
         $connection = $this->container->get(Connection::class);
 
-        $connection->executeQuery('DROP TABLE IF EXISTS `house`');
+
         $connection->executeQuery('DROP TABLE IF EXISTS `house_translation`');
+        $connection->executeQuery('DROP TABLE IF EXISTS `house`');
     }
 }
