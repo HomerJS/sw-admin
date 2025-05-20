@@ -19,5 +19,29 @@
                 />
             {% endblock %}
         </template>
+
+        {% block house_entity_list_sidebar %}
+            <template #sidebar>
+                <sw-sidebar class="house-entity-list__sidebar">
+                    {% block house_entity_list_sidebar_refresh %}
+                        <sw-sidebar-item
+                                icon="default-arrow-360-left"
+                                :title="Refresh"
+                                @click="onRefresh">
+                        </sw-sidebar-item>
+                    {% endblock %}
+                    {% block house_entity_list_sidebar_filter %}
+                        <sw-sidebar-filter-panel
+                                entity="house"
+                                :storeKey="storeKey"
+                                :filters="listFilters"
+                                :defaults="defaultFilters"
+                                :activeFilterNumber="activeFilterNumber"
+                                @criteria-changed="updateCriteria">
+                        </sw-sidebar-filter-panel>
+                    {% endblock %}
+                </sw-sidebar>
+            </template>
+        {% endblock %}
     </sw-page>
 {% endblock %}
