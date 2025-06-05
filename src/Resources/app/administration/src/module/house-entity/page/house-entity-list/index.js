@@ -25,10 +25,9 @@ Component.register('house-entity-list', {
 
     data() {
         return {
-            term: undefined,
-            total: 0,
+            total: 400,
+            limit: 10,
             page: 1,
-            limit: 30,
             isLoading: false,
             repository: undefined,
             houses: undefined,
@@ -60,7 +59,6 @@ Component.register('house-entity-list', {
         defaultCriteria() {
             const defaultCriteria = new Criteria(this.page, this.limit);
 
-            defaultCriteria.setTerm(this.term);
             defaultCriteria.addSorting(Criteria.sort('createdAt', 'DESC'));
 
             this.filterCriteria.forEach(filter => {
@@ -111,7 +109,6 @@ Component.register('house-entity-list', {
         },
 
         updateCriteria(criteria) {
-            this.page = 1;
             this.filterCriteria = criteria;
         },
 
@@ -122,17 +119,14 @@ Component.register('house-entity-list', {
                 .mergeWithStoredFilters(this.storeKey, this.defaultCriteria);
 
             this.activeFilterNumber = criteria.filters.length;
+            this.repository.search(criteria)
+                .then(result => {this.houses = result})
+                .finally(() => {this.isLoading = false});
+        },
 
-            try {
-                const items = await this.repository.search(criteria);
-
-                this.total = items.total;
-                this.houses = items;
-                this.isLoading = false;
-                this.selection = {};
-            } catch {
-                this.isLoading = false;
-            }
+        onPageChange({ page, limit }) {
+            this.page = page;
+            this.limit = limit;
         },
     },
 });
